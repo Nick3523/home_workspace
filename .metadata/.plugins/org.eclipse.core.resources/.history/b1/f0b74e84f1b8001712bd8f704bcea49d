@@ -1,0 +1,16 @@
+package garage;
+
+public class Lagouna extends Vehicule {
+
+	public Lagouna(double prix, String nom, Marque marque) {
+		super(prix, nom, marque);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Lagouna() {
+		super();
+		marque=Marque.Reno;
+		nom="Lagouna";
+	}
+
+}

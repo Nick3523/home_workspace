@@ -1,0 +1,10 @@
+package garage;
+
+public class Moteur {
+	
+	private TypeMoteur type;
+	private String cylindre;
+	private double prix;
+	
+
+}

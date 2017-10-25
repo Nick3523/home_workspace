@@ -1,0 +1,7 @@
+package garage;
+
+public enum Marque {
+	
+	Renault
+	
+}

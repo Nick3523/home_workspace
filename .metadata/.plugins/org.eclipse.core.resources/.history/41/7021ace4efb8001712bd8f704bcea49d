@@ -1,0 +1,15 @@
+package garage;
+
+public class GPS implements Option {
+
+	public GPS() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double getPrix() {
+		// TODO Auto-generated method stub
+		return 113.5;
+	}
+
+}

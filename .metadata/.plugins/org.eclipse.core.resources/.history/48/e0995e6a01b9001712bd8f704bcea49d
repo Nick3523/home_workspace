@@ -1,0 +1,16 @@
+package garage;
+
+public class MoteurHybride extends Moteur {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 543016939866825886L;
+
+	public MoteurHybride(String cylindre, double prix) {
+		super(cylindre, prix);
+		type=TypeMoteur.Hybride;
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,7 @@
+package garage;
+
+public interface Option implements Serializable {
+	
+	public double getPrix();
+
+}

@@ -1,0 +1,11 @@
+package garage;
+
+public class MoteurHybride extends Moteur {
+
+	public MoteurHybride(String cylindre, double prix) {
+		super(cylindre, prix);
+		type=TypeMoteur.Hybride;
+		// TODO Auto-generated constructor stub
+	}
+
+}

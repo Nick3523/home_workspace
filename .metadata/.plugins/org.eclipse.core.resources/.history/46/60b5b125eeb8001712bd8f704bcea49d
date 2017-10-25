@@ -1,0 +1,12 @@
+package garage;
+
+public class MoteurEssence extends Moteur {
+
+	public MoteurEssence(String cylindre, double prix) {
+		super(cylindre, prix);
+		// TODO Auto-generated constructor stub
+	}
+	
+	Moteur.type;
+	
+}

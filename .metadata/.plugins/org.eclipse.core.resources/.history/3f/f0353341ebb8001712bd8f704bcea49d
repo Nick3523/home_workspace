@@ -1,0 +1,20 @@
+package garage;
+
+public class Moteur {
+	
+	private TypeMoteur type;
+	private String cylindre;
+	private double prix;
+	
+	
+	
+	public Moteur(String cylindre, double prix) {
+		super();
+		this.cylindre = cylindre;
+		this.prix = prix;
+	}
+	
+	
+	
+
+}

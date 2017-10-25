@@ -1,0 +1,127 @@
+package search;
+
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Set;
+import java.util.Stack;
+import java.util.function.Function;
+
+@SuppressWarnings("unused")
+public class Problem<State extends Searchable<State,Action>,Action> {
+	
+	State initialState;
+	State finalState;
+	
+	
+	public boolean goal_test(State s){
+		return finalState.equals(s);
+	}
+	
+	public Problem(State start, State stop){
+		initialState = start;
+		finalState = stop;
+	}
+	
+	public String 	toString() {
+		return initialState + "\n" + " V \n\n" + finalState;	
+	}
+	
+	public int bfs(){
+		
+		List<State> etats = new ArrayList<State>();
+		etats.add(initialState);
+		List<State> memory = new ArrayList<State>();
+		int cpt=0;
+		
+		while (! etats.isEmpty() ) {
+			
+			State n = etats.get(0);
+			etats.remove(etats.get(0));
+			cpt++;
+			
+			if(goal_test(n)) {
+				
+				return cpt;
+			}
+			
+			memory.add(n);
+			
+			List<Action> mesactions =  n.getActions();
+			 
+			if (mesactions.isEmpty()) {System.out.println(cpt); return cpt;}
+
+			
+			for (int i=0; i<mesactions.size(); i++) {
+				
+				Action actual_action = mesactions.get(i);
+				
+				State actual_sate = n.execute(actual_action);				
+				
+				if (! memory.contains(actual_sate) && !etats.contains(actual_sate)) { //Je compare une action et un état, je pense que je me trompe
+					
+					etats.add(actual_sate);
+
+					System.out.println("Ajout numéro "+i);
+				}
+				
+			}
+		}
+		   
+		System.out.println("BFS a visité ="+cpt);
+		return cpt;
+
+    }
+	
+	
+
+
+	public int dfs(){
+		
+		   Deque<State> stack = new ArrayDeque<State>(); //Deque gère une pile, trouvé sur la documentation de java
+		   Deque<State> memory = new ArrayDeque<State>();	//Fournit les méthodes pop, push,ect..
+		   int cpt=0;
+		   stack.push(initialState);
+		   
+		   while (! stack.isEmpty() ) {
+			   
+			   State v = stack.pop();
+			   
+			   if (! memory.contains(v) ) {
+				   
+				   memory.add(v);
+				   cpt++;
+				   
+				  List<Action> mesactions =  v.getActions();
+				  
+				  if (mesactions.isEmpty()) {System.out.println(cpt); return cpt;}
+				   
+				   for(int i=0;i<mesactions.size();i++) {
+					   
+					   stack.push(v.execute(mesactions.get(i))); 
+				   }
+			   }
+			   
+		   }
+		
+		System.out.println(cpt);
+        return cpt;
+    }
+	
+	public int aStar(Function<State,Double> g, Function<State,Double> h ){
+		// to be completed
+        return 0;
+    }
+	
+	
+	public static void main(String[] args) {
+		
+		return;
+	}
+
+}

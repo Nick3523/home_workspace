@@ -1,0 +1,10 @@
+package garage;
+
+public enum TypeMoteur {
+	
+	Diesel,
+	Essence,
+	Hybride,
+	Electrique,
+
+}

@@ -1,0 +1,74 @@
+package garage;
+
+import java.util.ArrayList;
+
+public class Vehicule {
+	
+	
+	private double prix;
+	private String nom;
+	private ArrayList<Option> listopt = new ArrayList<Option> ();
+	private Moteur moteur;
+	protected Marque marque;
+	
+	
+	public Vehicule(double prix, String nom, Marque marque) {
+		super();
+		this.prix = prix;
+		this.nom = nom;
+		this.marque = marque;
+	}
+
+
+	public Vehicule() {
+
+	}
+
+
+	@Override
+	public String toString() {
+		
+		String opt=" ";
+		
+		for (Option option : listopt) {
+			
+			 opt = option.toString()+ " EAZAZ";
+		}
+		
+		return "Voiture " +  marque + " : " + moteur.toString()+opt;
+	}
+
+
+	public double getPrix() {
+		return prix;
+	}
+
+
+	public ArrayList<Option> getListopt() {
+		return listopt;
+	}
+
+
+	public Marque getMarque() {
+		return marque;
+	}
+	
+	
+ 	public Moteur getMoteur() {
+		return moteur;
+	}
+
+
+	public void setMoteur(Moteur moteur) {
+		this.moteur = moteur;
+	}
+
+
+	public void addOption(Option o) {
+ 		
+ 		if (listopt.contains(o)) listopt.add(o);
+ 	}
+	
+	
+
+}

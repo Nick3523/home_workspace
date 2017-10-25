@@ -1,0 +1,14 @@
+package garage;
+
+public class D4 extends Vehicule {
+
+	public D4(double prix, String nom, Marque marque) {
+		super(prix, nom, marque);
+		// TODO Auto-generated constructor stub
+	}
+
+	public D4() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

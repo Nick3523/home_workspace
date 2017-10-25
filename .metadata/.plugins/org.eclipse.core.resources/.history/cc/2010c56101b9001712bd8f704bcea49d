@@ -1,0 +1,82 @@
+package voiture;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
+import garage.Moteur;
+import garage.Option;
+
+public class Vehicule implements Serializable {
+	
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -877562990883567790L;
+	private double prix;
+	protected String nom;
+	private ArrayList<Option> listopt = new ArrayList<Option> ();
+	private Moteur moteur;
+	protected Marque marque;
+	
+	
+	public Vehicule(double prix, String nom, Marque marque) {
+		super();
+		this.prix = prix;
+		this.nom = nom;
+		this.marque = marque;
+	}
+
+
+	public Vehicule() {
+
+	}
+
+
+	@Override
+	public String toString() {
+		
+		String opt=" ";
+		
+		for (Option option : listopt) {
+			
+			 opt += option.toString()+ " ";
+		}
+		
+		return "+Voiture " +  marque + " : " + nom + " " + moteur.toString()+opt;
+	}
+
+
+	public double getPrix() {
+		return prix;
+	}
+
+
+	public ArrayList<Option> getListopt() {
+		return listopt;
+	}
+
+
+	public Marque getMarque() {
+		return marque;
+	}
+	
+	
+ 	public Moteur getMoteur() {
+		return moteur;
+	}
+
+
+	public void setMoteur(Moteur moteur) {
+		this.moteur = moteur;
+	}
+
+
+	public void addOption(Option o) {
+ 		
+ 		if (!listopt.contains(o)) listopt.add(o);
+ 	}
+	
+	
+
+}

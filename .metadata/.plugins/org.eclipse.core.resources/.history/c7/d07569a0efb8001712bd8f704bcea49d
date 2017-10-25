@@ -1,0 +1,16 @@
+package garage;
+
+public class SiegeChauffant implements Option {
+
+	public SiegeChauffant() {
+ 
+		prix=562.9;
+	}
+
+	@Override
+	public double getPrix() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

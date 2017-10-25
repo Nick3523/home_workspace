@@ -1,0 +1,27 @@
+package garage;
+
+public class Climatisation implements Option {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4670545402776299658L;
+
+	public Climatisation() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double getPrix() {
+		// TODO Auto-generated method stub
+		return 347.3;
+	}
+
+	@Override
+	public String toString() {
+		return "Climatisation=" + getPrix() + "]";
+	}
+	
+	
+
+}

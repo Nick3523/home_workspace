@@ -1,0 +1,22 @@
+package garage;
+
+public class VitreElectrique implements Option {
+
+	public VitreElectrique() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double getPrix() {
+		// TODO Auto-generated method stub
+		return 212.35;
+	}
+
+	@Override
+	public String toString() {
+		return "VitreElectrique [getPrix()=" + getPrix() + "]";
+	}
+	
+	
+
+}

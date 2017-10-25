@@ -1,0 +1,15 @@
+package garage;
+
+public class A300B extends Vehicule {
+
+	public A300B(double prix, String nom, Marque marque) {
+		super(prix, nom, marque);
+		// TODO Auto-generated constructor stub
+	}
+
+	public A300B() {
+		marque=Marque.Pigeo;
+		nom="A300B".
+		}
+
+}

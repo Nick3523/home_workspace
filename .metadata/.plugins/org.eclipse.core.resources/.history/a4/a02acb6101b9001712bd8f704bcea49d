@@ -1,0 +1,27 @@
+package garage;
+
+public class SiegeChauffant implements Option {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1644788704749941625L;
+
+	public SiegeChauffant() {
+ 
+	}
+
+	@Override
+	public double getPrix() {
+		// TODO Auto-generated method stub
+		return 562.9;
+	}
+
+	@Override
+	public String toString() {
+		return "SiegeChauffant =" + getPrix() + "]";
+	}
+
+	
+	
+}

@@ -1,0 +1,45 @@
+package garage;
+
+import java.io.Serializable;
+
+/**
+ * @author Nick
+ *
+ */
+public class Moteur implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5387856633413345649L;
+	protected TypeMoteur type;
+	private String cylindre;
+	private double prix;
+	
+	
+	
+	public Moteur(String cylindre, double prix) {
+		super();
+		this.cylindre = cylindre;
+		this.prix = prix;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Moteur [type=" + type + ", cylindre=" + cylindre + ", prix=" + prix + "]";
+	}
+
+
+
+	public double getPrix() {
+		return prix;
+	}
+	
+	
+	
+	
+	
+
+}
