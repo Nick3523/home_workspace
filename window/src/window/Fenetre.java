@@ -20,13 +20,15 @@ public class Fenetre extends JFrame {
 	    fenetre.setResizable(true);
 	    pan.setBackground(Color.RED);
 	    fenetre.setContentPane(pan);
-	    
+	    Mouser m = new Mouser(pan); //Passer le panneau en paramètre pour agir directement sur ces attributs
+	    fenetre.addMouseMotionListener(m);	//C'est le panneau qui déssine le cercle, via ses attributs PosX et posY
 	    fenetre.setVisible(true);
 
-	    go();
+	    //go();
 	}
 	
-	  private void go(){
+	  @SuppressWarnings("unused")
+	private void go(){
 		  //Principe : Si je dépasse la taille du panneau : Je recule. 		SINON J'avance, Réculer = décrementez les coordoonées X et Y; Avancer = les incrémenter
 		  
 		    for(;;){
