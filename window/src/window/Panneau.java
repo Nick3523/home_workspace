@@ -1,37 +1,42 @@
 package window;
 
+import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.LayoutManager;
 
 import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
 public class Panneau extends JPanel {
 
-	public Panneau() {
-		// TODO Auto-generated constructor stub
-	}
+	  private int posX = -50;
+	  private int posY = -50;
+	  
+	  public int getPosX() {
+		    return posX;
+		  }
 
-	public Panneau(LayoutManager layout) {
-		super(layout);
-		// TODO Auto-generated constructor stub
-	}
+		  public void setPosX(int posX) {
+		    this.posX = posX;
+		  }
 
-	public Panneau(boolean isDoubleBuffered) {
-		super(isDoubleBuffered);
-		// TODO Auto-generated constructor stub
-	}
+		  public int getPosY() {
+		    return posY;
+		  }
 
-	public Panneau(LayoutManager layout, boolean isDoubleBuffered) {
-		super(layout, isDoubleBuffered);
-		// TODO Auto-generated constructor stub
-	}
-	
+		  public void setPosY(int posY) {
+		    this.posY = posY;
+		  }
+	  
 	  public void paintComponent(Graphics g){
+		  
+		  
+		  	g.setColor(Color.WHITE);
+		    g.fillRect(0, 0, this.getWidth(), this.getHeight()); //Poue masquer le rond d'avant, on repeint tout en blanc pour ensuite repeindre le rond dans les nouvelles positions !
+
 		    //Vous verrez cette phrase chaque fois que la méthode sera invoquée
 		    System.out.println("Je suis exécutée !"); 
-		    g.fillOval(20, 20, 75, 75);
-		    g.drawString("Tiens ! Le Site du Zéro !", 100, 200);
+		  	g.setColor(Color.RED);
+		    g.fillOval(posX, posY, 75, 75);
 
 		  }
 
