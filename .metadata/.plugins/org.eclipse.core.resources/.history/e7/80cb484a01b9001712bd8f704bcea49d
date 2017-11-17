@@ -1,9 +1,0 @@
-package garage;
-
-public enum Marque {
-	
-	Reno,
-	Pigeo,
-	Troen,
-	
-}

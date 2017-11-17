@@ -1,8 +1,0 @@
-package garage;
-
-public interface Option {
-	
-	private double prix;
-	public double getPrix();
-
-}
